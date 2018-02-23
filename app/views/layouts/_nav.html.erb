@@ -1,0 +1,7 @@
+sign out
+
+<% if current_user %>
+  <%= form_tag "/signout", method: :post %>
+    <% f.submit "Log Out" %>
+  <% end %>
+<% end %>

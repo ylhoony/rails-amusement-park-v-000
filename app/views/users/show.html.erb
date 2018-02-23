@@ -1,0 +1,18 @@
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
+<% if @user.admin == true %>
+  ADMIN<br/>
+<% end %>
+Name: <%= @user.name %><br/>
+Happiness: <%= @user.happiness %><br/>
+Nausea: <%= @user.nausea %><br/>
+Height: <%= @user.height %><br/>
+Tickets: <%= @user.tickets %><br/>
+Mood: <%= @user.mood %><br/>
+<br/>
+
+<%= link_to "Edit User", edit_user_path(@user) %><br/>
+
+<%= link_to "See attractions", attractions_path %>
