@@ -2,7 +2,7 @@ class AttractionsController < ApplicationController
   before_action :logged_in?
 
   def index
-
+    @attractions = Attraction.all
   end
 
   def new
