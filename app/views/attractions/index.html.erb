@@ -9,7 +9,7 @@
   <% @attractions.each do |attraction| %>
 
     <tr>
-      <tr>Name</tr>
+      <tr><%= attraction.name %></tr>
       <tr>Tickets</tr>
       <tr><%= link_to "Go on #{attraction.name}", attraction_path(attraction) %></tr>
     </tr>
