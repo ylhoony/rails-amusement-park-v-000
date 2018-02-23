@@ -8,7 +8,7 @@ Happiness Rating: <%= @attraction.happiness_rating %><br/>
 
 
 <%= form_tag "/rides/new", method: :post do %>
-  <%= hidden_field :user_id %>
-  <%= hidden_field :attraction_id %>
+  <%= hidden_field :user_id, current_user.id %>
+  <%= hidden_field :attraction_id, @attraction.id %>
   <%= submit_tag("Go on this ride") %>
 <% end %>
