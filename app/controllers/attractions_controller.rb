@@ -11,6 +11,7 @@ class AttractionsController < ApplicationController
 
   def create
     binding.pry
+    @attraction = Attraction.new(attraction_params)
     
   end
 
