@@ -9,7 +9,7 @@ class Ride < ActiveRecord::Base
     elsif !enough_tickets?
       return "Sorry. You do not have enough tickets to ride the #{self.attraction.name}."
     elsif !meet_min_height?
-      return "Sorry. You are not tall enough to ride the #{self.attraction.name}"
+      return "Sorry. You are not tall enough to ride the #{self.attraction.name}."
     end
 
     self.user.update(
