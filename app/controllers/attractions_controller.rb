@@ -21,6 +21,6 @@ class AttractionsController < ApplicationController
 
   end
 
-  
+
 
 end
