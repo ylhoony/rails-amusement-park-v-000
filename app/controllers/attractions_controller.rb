@@ -10,7 +10,7 @@ class AttractionsController < ApplicationController
   end
 
   def create
-    binding.pry
+    # binding.pry
     @attraction = Attraction.new(attraction_params)
     return redirect_to attractions_path unless current_user.admin == true
     if @attraction.save
