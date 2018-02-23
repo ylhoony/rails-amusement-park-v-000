@@ -36,7 +36,6 @@ class AttractionsController < ApplicationController
     else
       redirect_to attractions_path
     end
-    
   end
 
   private
