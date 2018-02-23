@@ -6,11 +6,12 @@ Nausea Rating: <%= @attraction.nausea_rating %><br/>
 Happiness Rating: <%= @attraction.happiness_rating %><br/>
 <br/>
 
-
-<%= form_tag "/rides/new", method: :post do %>
-  <%= hidden_field_tag :user_id, current_user.id %>
-  <%= hidden_field_tag :attraction_id, @attraction.id %>
-  <%= submit_tag("Go on this ride") %>
+<% if !current_user.admin == true %>
+  <%= form_tag "/rides/new", method: :post do %>
+    <%= hidden_field_tag :user_id, current_user.id %>
+    <%= hidden_field_tag :attraction_id, @attraction.id %>
+    <%= submit_tag("Go on this ride") %>
+  <% end %>
 <% end %>
 
 <%= link_to "Back", request.referer %>
