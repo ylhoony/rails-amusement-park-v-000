@@ -1,7 +1,7 @@
 <%= form_tag "/rides/new", method: :post do %>
 
   Name: <%= @attraction.name %><br/>
-  Total Number of Users: <%= @attraction.name %><br/>
+  Total Number of Users: <%= @attraction.rides.size %><br/>
   Ticket Requirement: <%= @attraction.tickets %><br/>
   Height Requirement: <%= @attraction.name %><br/>
   Nausea Rating: <%= @attraction.name %><br/>
