@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>Picture</th>
     <th>Name</th>
     <th>Tickets</th>
     <th>Details</th>
@@ -10,7 +9,6 @@
   <% @attractions.each do |attraction| %>
 
     <tr>
-      <tr>Picture</tr>
       <tr>Name</tr>
       <tr>Tickets</tr>
       <tr><%= link_to "Go on #{attraction.name}", attraction_path(attraction) %></tr>
