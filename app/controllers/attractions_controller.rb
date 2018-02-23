@@ -10,7 +10,7 @@ class AttractionsController < ApplicationController
   end
 
   def create
-
+    binding.pry
   end
 
   def show
