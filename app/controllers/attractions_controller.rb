@@ -11,6 +11,7 @@ class AttractionsController < ApplicationController
 
   def create
     binding.pry
+    
   end
 
   def show
