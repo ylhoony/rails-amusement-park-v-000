@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :new, :create, :show, :edit]
   resources :attractions, only: [:index, :new, :create, :show, :edit]
-  resources :rides, only: [:create]
+  get "/rides/new", to: "rides#create"
 
 
 end
