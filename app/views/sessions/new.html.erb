@@ -1,0 +1,14 @@
+<h2>Sign in</h2>
+
+<%= form_for @session, url: "/signin" do |f| %>
+
+  <%= f.label :name %><br/>
+  <%= f.text_field :name %><br/>
+
+  <%= f.label :password %><br/>
+  <%= f.password_field :password %><br/>
+  <br/>
+
+  <%= f.submit "Sign In"%>
+
+<% end %>

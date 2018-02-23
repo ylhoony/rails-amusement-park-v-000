@@ -1,0 +1,12 @@
+<% if @user.admin == true %>
+  ADMIN<br/>
+<% end %>
+Name: <%= @user.name %><br/>
+Happiness: <%= @user.happiness %><br/>
+Nausea: <%= @user.nausea %><br/>
+Height: <%= @user.height %><br/>
+Available Dollars: <%= @user.tickets %><br/>
+Mood: <%= @user.mood %><br/>
+<br/>
+
+<%= link_to "Edit User", edit_user_path(@user) %>
