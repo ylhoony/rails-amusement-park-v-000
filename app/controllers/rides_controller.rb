@@ -5,7 +5,7 @@ class RidesController < ApplicationController
     @ride.user = User.find(params[:user_id])
     @ride.attraction = Attraction.find(params[:attraction_id])
     # binding.pry
-    if @ride.take_ride == true
+    if @ride.take_ride === true
       @ride.save
       redirect_to user_path(@ride.user), notice: "Thanks for riding the #{@ride.attraction.name}!"
     else
