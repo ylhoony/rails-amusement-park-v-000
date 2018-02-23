@@ -6,7 +6,8 @@ class RidesController < ApplicationController
     @ride.user = User.find(params[:user_id])
     @ride.attraction = Attraction.find(params[:attraction_id])
     @ride.save
-    
+    @ride.take_ride
+    render controller: "users", action: "show"
   end
 
 end
