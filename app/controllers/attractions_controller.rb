@@ -7,7 +7,7 @@ class AttractionsController < ApplicationController
   end
 
   def new
-
+    @attraction = Attraction.new
   end
 
   def create
@@ -26,6 +26,10 @@ class AttractionsController < ApplicationController
 
   end
 
+  private
+    def attraction_params
+      params.require(:attraction).permit()
+    end
 
 
 end
