@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post "/signout", to: "sessions#destroy"
 
   resources :users, only: [:index, :new, :create, :show, :edit]
-  resources :attractions, only: [:index, :new, :create, :show, :edit]
+  resources :attractions, only: [:index, :new, :create, :show, :edit, :update]
   post "/rides/new", to: "rides#new"
 
 
