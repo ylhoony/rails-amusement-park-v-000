@@ -30,6 +30,7 @@ class AttractionsController < ApplicationController
 
   def update
     @attraction = Attraction.find(params[:id])
+    binding.pry
     if current_user.admin == true
       @attraction.update(attraction_params)
       redirect_to attraction_path(@attraction)
