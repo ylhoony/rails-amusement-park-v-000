@@ -2,6 +2,7 @@ class AttractionsController < ApplicationController
   before_action :logged_in?
 
   def index
+    binding.pry
     @attractions = Attraction.all
   end
 
