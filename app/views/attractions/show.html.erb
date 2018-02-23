@@ -1,4 +1,4 @@
-<%= form_tag "/rides/new", method: :post do %>
+
 
   Name: <%= @attraction.name %><br/>
   Total Number of Users: <%= @attraction.rides.size %><br/>
@@ -7,8 +7,10 @@
   Nausea Rating: <%= @attraction.nausea_rating %><br/>
   Happiness Rating: <%= @attraction.happiness_rating %><br/>
 
+
+
+
+
+<%= form_tag "/rides/new", method: :post do %>
   <%= submit_tag("Go on this ride") %>
-
 <% end %>
-
-
