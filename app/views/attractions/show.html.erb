@@ -3,13 +3,18 @@
   Name: <%= @attraction.name %><br/>
   Total Number of Users: <%= @attraction.rides.size %><br/>
   Ticket Requirement: <%= @attraction.tickets %><br/>
-  Height Requirement: <%= @attraction.name %><br/>
-  Nausea Rating: <%= @attraction.name %><br/>
-  Happiness Rating: <%= @attraction.name %><br/>
+  Height Requirement: <%= @attraction.min_height %><br/>
+  Nausea Rating: <%= @attraction.nausea_rating %><br/>
+  Happiness Rating: <%= @attraction.happiness_rating %><br/>
 
   <%= submit_tag("Go on this ride") %>
 
 <% end %>
+
+t.integer  "tickets"
+t.integer  "nausea_rating"
+t.integer  "happiness_rating"
+t.integer  "min_height"
 
 
 <%= form_for @attraction.rides.build do |f| %>
