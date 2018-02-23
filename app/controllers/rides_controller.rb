@@ -7,7 +7,7 @@ class RidesController < ApplicationController
     @ride.attraction = Attraction.find(params[:attraction_id])
     @ride.save
     @ride.take_ride
-    redirect_to user_path(@ride.user), notice: "Thanks for riding the #{@ride.attraction.name}!"
+    redirect_to user_path(@ride.user), notice: @ride.take_ride
   end
 
 end
