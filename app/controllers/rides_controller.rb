@@ -7,6 +7,7 @@ class RidesController < ApplicationController
     @ride.attraction = Attraction.find(params[:attraction_id])
     @ride.save
     @ride.take_ride
+    binding.pry
     redirect_to user_path(@ride.user), notice: @ride.take_ride
   end
 
