@@ -2,7 +2,6 @@ class AttractionsController < ApplicationController
   before_action :logged_in?
 
   def index
-    # binding.pry
     @attractions = Attraction.all
   end
 
@@ -27,6 +26,7 @@ class AttractionsController < ApplicationController
   end
 
   private
+
     def attraction_params
       params.require(:attraction).permit(:name, :tickets, :nausea_rating, :happiness_rating, :min_height)
     end
