@@ -1,4 +1,9 @@
 <h2>Attractions</h2>
-<% @attractions.each do |attraction| %>
-  <%= link_to "Go on #{attraction.name}", attraction_path(attraction) %>
-<% end %>
+
+<table>
+  <% @attractions.each do |attraction| %>
+
+
+    <%= link_to "Go on #{attraction.name}", attraction_path(attraction) %>
+  <% end %>
+</table>
